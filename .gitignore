@@ -102,3 +102,19 @@ dist
 
 # TernJS port file
 .tern-port
+
+# cypress
+/cypress/integration/examples/*
+/cypress/screenshots/*
+/cypress/videos/*
+/cypress/fictures/*
+
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
