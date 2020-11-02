@@ -1,1 +1,21 @@
-{}
+{
+  "baseUrl": "https://www.thetestroom.com/webapp/",
+  "ignoreTestFiles": [
+    "**/examples/*",
+    "**/__snapshots__/*",
+    "**/*/secondTest.spec.js",
+    "**/__image_snapshots__/*"
+  ],
+  "viewportHeight": 1080,
+  "viewportWidth": 1920,
+  "video": false,
+  "defaultCommandTimeout": 10000,
+  "projectId": "soeotu",
+  "env": {
+    "cypress-plugin-snapshots": {
+      "imageConfig": {
+        "threshold": 0.01
+      }
+    }
+  }
+}

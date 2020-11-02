@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/kwaiga8/cypress-training#readme",
   "devDependencies": {
-    "cypress": "^5.5.0"
+    "cypress": "^5.5.0",
+    "faker": "^5.1.0"
   }
 }
