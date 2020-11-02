@@ -4,7 +4,7 @@
   "description": "Some possible test proposals",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open"
+    "test": "node_modules/.bin/cypress run"
   },
   "repository": {
     "type": "git",
