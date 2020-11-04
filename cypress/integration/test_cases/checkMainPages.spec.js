@@ -1,14 +1,19 @@
 
 
 describe('Check if every main page is correctly opened', () => {
-    const pages = ['index', 'adoption', 'about', 'contact'];
-    const headers = ['WELCOME TO THE ZOO ADOPTION CENTER', 'ADOPTION OPTIONS', 'ABOUT', 'CONTACT US'];
 
-    for (let n in pages) {
-        it(`should be visible correct header on ${pages[n]} page`, () => {
-            cy.openPage(pages[n].toString());
+    const pageTitles ={
+        'index':'WELCOME TO THE ZOO ADOPTION CENTER',
+        'adoption': 'ADOPTION OPTIONS',
+        'about': 'ABOUT',
+        'contact': 'CONTACT US'
+    };
+
+    for (const [key, value] of Object.entries(pageTitles)){
+        it(`should be visible correct header on ${key} page`, () => {
+            cy.openPage(key);
             cy.get('h1').then(header => {
-                expect(header.text()).to.contain(headers[n]);
+                expect(header.text()).to.contain(value);
             })
         });
     }
