@@ -5,13 +5,15 @@ Repo to practice cypress
 https://dashboard.cypress.io/projects/n9u7wm/runs/2/specs
 
 --------------------------------------------------
-### <a name="guide"></a> Diagrams with paths that was tested:
+### <a name="guide"></a> Diagrams with basic test paths:
 
 <p align="center">
   <img src="cypress/PATHs.PNG" width="600" title="Test Paths">
 </p>
 
 --------------------------------------------------
+### <a name="guide"></a> My mind map of testing:
+
 <p align="center">
   <img src="cypress/AdoptionAppPath.PNG" width="600" title="Diagram with my mind map of testing Test Paths">
 </p>
