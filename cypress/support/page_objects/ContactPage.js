@@ -1,4 +1,4 @@
-import {fillFormWithRandomData} from "./FormPage";
+import {onForm} from "./FormPage";
 
 export class ContactPage{
     Radios = {
@@ -33,7 +33,7 @@ export class ContactPage{
         this.selectRandomRadiobutton();
         this.selectCheckboxEmaillNewsletter();
         this.selectCheckboxZooVolunteer();
-        fillFormWithRandomData();
+        onForm.fillFormWithRandomData();
     }
 
     fillContactFormWithRandomDataAndSubmit() {

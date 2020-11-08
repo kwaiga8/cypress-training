@@ -11,7 +11,7 @@ describe('Check basic behaviour of adoption form', () => {
 
     it('should not be possible to adopt turtle without reading the terms', () => {
         onAdoptionPage.selectDate('First day of the next week');
-        onAdoptionPage.selectAnimalByRow(2);
+        onAdoptionPage.selectAnimalByType('turtle');
         onAdoptionPage.fillAdoptionFormWithRandomDataAndSubmit();
         cy.get('.content').invoke('text').then(isAvailable => {
             expect(isAvailable, `${isAvailable}`).to.not.contain(successAdoptionMsg);
@@ -20,7 +20,7 @@ describe('Check basic behaviour of adoption form', () => {
 
     it('should be possible to adopt turtle when filling correctly all form', () => {
         onAdoptionPage.selectDate('Today');
-        onAdoptionPage.selectAnimalByRow(2);
+        onAdoptionPage.selectAnimalByType('turtle');
         cy.get('#result').invoke('text').then(isAvailable => {
             expect(isAvailable, `${isAvailable}`).to.contain(congratulationsAvailabilityMsg);
         });

@@ -1,5 +1,5 @@
 import {onContactPage} from "../../support/page_objects/ContactPage";
-import {clearField, form} from "../../support/page_objects/FormPage";
+import {form, onForm} from "../../support/page_objects/FormPage";
 
 String.prototype.capitalize = function () {
     return this.charAt(0).toUpperCase() + this.slice(1)
@@ -11,11 +11,14 @@ describe('Check submission on contact form', () => {
         cy.openPage('contact');
     });
 
-    it(`should be not possible to send a message without filling the form`, () => {
+    it(`should not be possible to send a message without filling the form`, () => {
         onContactPage.submitContactInfo();
         cy.get('.content').invoke('text').then(isSend => {
             expect(isSend).to.not.contain('We have your message');
         });
+        cy.get('h1').then(header => {
+            expect(header.text()).to.contain('CONTACT US');
+        })
     });
 
 
@@ -29,7 +32,7 @@ describe('Check submission on contact form', () => {
     for (let n in form) {
         it(`should not be possible to send contact form without ${form[n]} value`, () => {
             onContactPage.fillContactFormWithRandomData();
-            clearField(form[n]);
+            onForm.clearField(form[n]);
             const stub = cy.stub();
             cy.on('window:alert', stub);
             cy.get('#submit_message').click().then(() => {
