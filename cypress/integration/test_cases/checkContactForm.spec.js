@@ -1,7 +1,7 @@
 import {onContactPage} from "../../support/page_objects/ContactPage";
 import {clearField, form} from "../../support/page_objects/FormPage";
 
-String.prototype.capitalize = function() {
+String.prototype.capitalize = function () {
     return this.charAt(0).toUpperCase() + this.slice(1)
 };
 
@@ -21,10 +21,10 @@ describe('Check submission on contact form', () => {
 
     it(`should be visible success message after correct filling the form`, () => {
         onContactPage.fillContactFormWithRandomDataAndSubmit();
-            cy.get('.content').invoke('text').then(isSend => {
-                expect(isSend).to.contain('We have your message');
-            });
+        cy.get('.content').invoke('text').then(isSend => {
+            expect(isSend).to.contain('We have your message');
         });
+    });
 
     for (let n in form) {
         it(`should not be possible to send contact form without ${form[n]} value`, () => {

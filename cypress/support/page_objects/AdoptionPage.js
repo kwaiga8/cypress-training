@@ -2,8 +2,17 @@ import {fillFormWithRandomData} from "./FormPage";
 
 export class AdoptionPage {
 
+    Animals ={
+        'lion':'1',
+        'turtle': '2',
+    };
+
     selectAnimalByRow(numberInTable) {
         cy.get(`#check_btn_0${numberInTable}`).click();
+    };
+
+    selectAnimalByType(animalType) {
+        cy.get(`#check_btn_0${this.Animals[animalType]}`).click();
     };
 
     selectDate(date) {

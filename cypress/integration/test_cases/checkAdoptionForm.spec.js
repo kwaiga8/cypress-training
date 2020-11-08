@@ -31,7 +31,7 @@ describe('Check basic behaviour of adoption form', () => {
             expect(isAvailable, `${isAvailable}`).to.contain(successAdoptionMsg);
         });
     });
-})
+});
 
 
 

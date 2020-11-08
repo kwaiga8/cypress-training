@@ -1,5 +1,5 @@
 Cypress.Commands.add('openPage', (page)=> {
-    cy.visit(`${page}.html`)
+    cy.visit(`${page}.html`);
 });
 
 Cypress.Commands.add('typeInField', (fieldName, value) =>{

@@ -1,5 +1,4 @@
 
-
 describe('Check if every main page is correctly opened', () => {
 
     const pageTitles ={
