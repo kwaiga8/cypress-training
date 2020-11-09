@@ -108,6 +108,8 @@ dist
 /cypress/screenshots/*
 /cypress/videos/*
 /cypress/fictures/*
+/cypress/results/
+/cypress/dockerReports/
 
 
 # IDEs and editors

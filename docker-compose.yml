@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  cypress_test:
+    image: cypress_compose
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+    - ./dockerReports:/cypress/results

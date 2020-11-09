@@ -9,6 +9,10 @@
   "viewportHeight": 1080,
   "viewportWidth": 1920,
   "video": false,
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  },
   "defaultCommandTimeout": 10000,
   "projectId": "n9u7wm",
   "env": {

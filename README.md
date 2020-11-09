@@ -17,3 +17,7 @@ https://dashboard.cypress.io/projects/n9u7wm/runs/2/specs
 <p align="center">
   <img src="cypress/AdoptionAppPath.PNG" width="600" title="Diagram with my mind map of testing test paths">
 </p>
+--------------------------------------------------
+CI part:
+ docker build -t cypress .
+ docker-compose up
