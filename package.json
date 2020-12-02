@@ -4,7 +4,7 @@
   "description": "Some possible test proposals",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open"
+    "test": "node_modules/.bin/cypress run"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/kwaiga8/cypress-training#readme",
   "devDependencies": {
-    "cypress": "^5.5.0"
+    "cypress": "^5.5.0",
+    "faker": "^5.1.0"
   }
 }
